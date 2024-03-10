@@ -11,8 +11,8 @@ def formPage():
 def submit():
     if request.method == "POST":
         user = request.form["user"] # extract user data from form submission
-        print("post : user => ", user) # redirect to success route with user data
-        return redirect(url_for("success", name=user, action="post"))
+        print("post : user => ", user) 
+        return redirect(url_for("success", name=user, action="post")) # redirect to success route with user data
 
     else:
         user = request.args.get("user") # extract user data from URL parameters
